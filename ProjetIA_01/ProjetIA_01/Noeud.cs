@@ -70,6 +70,13 @@ namespace ProjetIA_01
             Noeud NoeudBasGauche = new Noeud(X - 1, Y - 1);
             Noeud NoeudGauche = new Noeud(X-1, Y);
             Enfants.Add(NoeudHautGauche);
+            Enfants.Add(NoeudHaut);
+            Enfants.Add(NoeudHautDroite);
+            Enfants.Add(NoeudDroite);
+            Enfants.Add(NoeudBasDroite);
+            Enfants.Add(NoeudBas);
+            Enfants.Add(NoeudBasGauche);
+            Enfants.Add(NoeudGauche);
 
             return Enfants;
 
