@@ -1,0 +1,4 @@
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csprojAssemblyReference.cache
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Properties.Resources.resources
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.GenerateResource.cache
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.CoreCompileInputs.cache
