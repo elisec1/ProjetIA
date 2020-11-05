@@ -2,3 +2,9 @@ C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\Proje
 C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Properties.Resources.resources
 C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.GenerateResource.cache
 C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.CoreCompileInputs.cache
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\bin\Debug\ProjetIA_01.exe.config
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\bin\Debug\ProjetIA_01.exe
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\bin\Debug\ProjetIA_01.pdb
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.exe
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.pdb
+C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Form1.resources
