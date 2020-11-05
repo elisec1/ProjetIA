@@ -18,7 +18,7 @@ namespace ProjetIA_01
         {
             get;set;
         }
-        public Noeud (double x, double y )
+        public Noeud (double x, double y): base()
         {
             X = x;
             Y = y;
@@ -34,9 +34,11 @@ namespace ProjetIA_01
             return estEgal;
         }
 
-        public override double CalculeHCost()
+        public override double CalculeHCost(GenericNode N2)
         {
-            //distance jusqu'à la fin
+            Noeud Nf = (Noeud)N2;
+            double distance = Math.Sqrt(Math.Pow(Nf.X - X,2)+ Math.Pow(Nf.Y - Y,2));
+            return distance;
         }
 
         public override double GetArcCost(GenericNode N2)
@@ -45,13 +47,32 @@ namespace ProjetIA_01
             double coutArc = N2.GetGCost() - this.GetGCost();
             return coutArc;
         }
-        public override bool EndState()
+        public override bool EndState(GenericNode N2)
         {
-            throw new NotImplementedException(); 
+            Noeud Nf = (Noeud)N2;
+            if (IsEqual(Nf) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public override List<GenericNode> GetListSucc()
         {
-            //
+            Noeud NoeudHautGauche = new Noeud(X - 1, Y + 1);
+            Noeud NoeudHaut = new Noeud(X, Y + 1);
+            Noeud NoeudHautDroite = new Noeud(X + 1, Y + 1);
+            Noeud NoeudDroite = new Noeud(X + 1, Y);
+            Noeud NoeudBasDroite = new Noeud(X + 1, Y - 1);
+            Noeud NoeudBas = new Noeud(X, Y - 1);
+            Noeud NoeudBasGauche = new Noeud(X - 1, Y - 1);
+            Noeud NoeudGauche = new Noeud(X-1, Y);
+            Enfants = Enfants.Add(NoeudHautGauche);
+
+            return Enfants;
+
         }
     }
 }
