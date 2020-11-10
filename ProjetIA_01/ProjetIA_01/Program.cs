@@ -18,17 +18,14 @@ namespace ProjetIA_01
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            Noeud conditionsInitiales = new Noeud(0, 0,100,200);
+            Noeud conditionsInitiales = new Noeud(100, 200, 200, 100);
             SearchTree Arbre = new SearchTree();
             List<GenericNode> chemin = Arbre.RechercheSolutionAEtoile(conditionsInitiales);
-            TreeView TV = new TreeView();
-            Arbre.GetSearchTree(TV);
-            
 
-
+            Console.WriteLine("bla");
         }
-        
-    
-}
+
+
+    }
 
 }   

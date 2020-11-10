@@ -7,14 +7,14 @@ using System.Windows.Forms;
 
 namespace ProjetIA_01
 {
-    class Noeud : GenericNode
+    public class Noeud : GenericNode
     {
 
-        double X
+        public double X
         {
             get;set;
         }
-        double Y
+        public double Y
         {
             get;set;
         }
@@ -53,7 +53,7 @@ namespace ProjetIA_01
         public override double GetArcCost(GenericNode N2)
         {
             Noeud N = (Noeud)N2;
-            double coutArc = time_estimation(N.X,N.Y,X,Y);
+            double coutArc = time_estimation(X,Y,N.X,N.Y);
             return coutArc;
         }
         public override bool EndState()
@@ -96,7 +96,7 @@ namespace ProjetIA_01
             return chaine;
         }
 
-        public char cas = 'a'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
+        public char cas = 'b'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
         public double get_wind_speed(double x, double y)
         {
             if (cas == 'a')
