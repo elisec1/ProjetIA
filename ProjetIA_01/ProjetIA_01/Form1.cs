@@ -46,13 +46,45 @@ namespace ProjetIA_01
 
         private void button1_Click(object sender, EventArgs e) //affichage trajectoire
         {
-            Noeud conditionsInitiales = new Noeud(100, 200, 200, 100);
+            char cas=''; //il veut forcement que je mette autre chose ici
+            if(radioButton1.Checked)
+            {
+                cas = 'a';
+            }
+            else
+            {
+                if(radioButton2.Checked)
+                {
+                    cas = 'b';
+                }
+                else
+                {
+                    if(radioButton3.Checked)
+                    {
+                        cas = 'c';
+                    }
+                    else
+                    {
+                        //comment on dit erreur ?
+                    }
+                }
+            }
+            Noeud conditionsInitiales = new Noeud(100, 200, 80, 180, cas);
             SearchTree Arbre = new SearchTree();
             List<GenericNode> chemin = Arbre.RechercheSolutionAEtoile(conditionsInitiales);
             for (int i = 0; i < chemin.Count() - 1; i++)
             {
                 DessinSegment((Noeud)chemin[i], (Noeud)chemin[i + 1]);
             }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e) //cas a
+        {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) //image de fond
+        {
+
         }
     }
 }

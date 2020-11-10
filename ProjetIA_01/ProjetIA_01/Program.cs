@@ -17,12 +17,6 @@ namespace ProjetIA_01
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
-            Noeud conditionsInitiales = new Noeud(100, 200, 200, 100);
-            SearchTree Arbre = new SearchTree();
-            List<GenericNode> chemin = Arbre.RechercheSolutionAEtoile(conditionsInitiales);
-
-            Console.WriteLine("bla");
         }
 
 

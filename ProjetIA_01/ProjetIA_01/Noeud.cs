@@ -18,6 +18,7 @@ namespace ProjetIA_01
         {
             get;set;
         }
+        public char cas;// = 'b'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
         static Noeud Nf
         {
             get;set;
@@ -27,11 +28,12 @@ namespace ProjetIA_01
             X = x;
             Y = y;
         }
-        public Noeud(double x, double y, double xf, double yf) : base()
+        public Noeud(double x, double y, double xf, double yf, char choixCas) : base()
         {
             X = x;
             Y = y;
             Nf = new Noeud(xf, yf);
+            cas = choixCas;
         }
         public override bool IsEqual(GenericNode N2)
         {
@@ -47,7 +49,7 @@ namespace ProjetIA_01
         public override double CalculeHCost()
         {
             double distance = Math.Sqrt(Math.Pow(Nf.X - X,2)+ Math.Pow(Nf.Y - Y,2));
-            return distance;
+            return 0;
         }
 
         public override double GetArcCost(GenericNode N2)
@@ -96,7 +98,7 @@ namespace ProjetIA_01
             return chaine;
         }
 
-        public char cas = 'b'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
+        
         public double get_wind_speed(double x, double y)
         {
             if (cas == 'a')
@@ -153,7 +155,7 @@ namespace ProjetIA_01
             else
                 return 1000000;
             // estimation du temps de navigation entre p1 et p2
-            return (distance / boatspeed);
+            return (distance /boatspeed);
         }
     }
 
