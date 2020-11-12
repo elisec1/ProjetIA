@@ -15,6 +15,13 @@ namespace ProjetIA_01
         public Form1()
         {
             InitializeComponent();
+            pictureBox1.Hide();
+            button1.Hide();
+            button3.Hide();
+            label1.Hide();
+            radioButton1.Hide();
+            radioButton2.Hide();
+            radioButton3.Hide();
             
         }
 
@@ -46,26 +53,23 @@ namespace ProjetIA_01
 
         private void button1_Click(object sender, EventArgs e) //affichage trajectoire
         {
-            char cas=''; //il veut forcement que je mette autre chose ici
-            if(radioButton1.Checked)
+            pictureBox1.Show();
+            char cas='d';
+            if (radioButton1.Checked)
             {
                 cas = 'a';
             }
             else
             {
-                if(radioButton2.Checked)
+                if (radioButton2.Checked)
                 {
                     cas = 'b';
                 }
                 else
                 {
-                    if(radioButton3.Checked)
+                    if (radioButton3.Checked)
                     {
                         cas = 'c';
-                    }
-                    else
-                    {
-                        //comment on dit erreur ?
                     }
                 }
             }
@@ -76,15 +80,49 @@ namespace ProjetIA_01
             {
                 DessinSegment((Noeud)chemin[i], (Noeud)chemin[i + 1]);
             }
+            button3.Show();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e) //cas a
         {
+            button1.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) //image de fond
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Hide();
+            label1.Show();
+            radioButton1.Show();
+            radioButton2.Show();
+            radioButton3.Show();
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.Show();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 NewForm = new Form1();
+            NewForm.Show();
+            this.Dispose(false);
         }
     }
 }
