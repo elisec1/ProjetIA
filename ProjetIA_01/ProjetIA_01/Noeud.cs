@@ -19,7 +19,7 @@ namespace ProjetIA_01
             get;set;
         }
         public char cas;// = 'b'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
-        static Noeud Nf
+        public static Noeud Nf
         {
             get;set;
         }
@@ -49,7 +49,50 @@ namespace ProjetIA_01
         public override double CalculeHCost()
         {
             double distance = Math.Sqrt(Math.Pow(Nf.X - X,2)+ Math.Pow(Nf.Y - Y,2));
-            return 0;
+            double tempsRestant = 0;
+            //On divise cette distance totale en tronçons de 10 km pour pouvoir utiliser time_estimation
+            int nbTroncons = (int)distance / 10;
+            List<double> Xintermediaire = new List<double>();
+            List<double> Yintermediaire = new List<double>();
+            Xintermediaire.Add(X);
+            Yintermediaire.Add(Y);
+            for (int i = 1; i < nbTroncons; i++)
+            {
+                if (Nf.X > X)
+                {
+                    if (Nf.Y > Y)
+                    {
+                        Xintermediaire.Add(Xintermediaire[i - 1] + 5);
+                        Yintermediaire.Add(Yintermediaire[i - 1] + 5);
+                    }
+                    else
+                    {
+                        Xintermediaire.Add(Xintermediaire[i - 1] + 5);
+                        Yintermediaire.Add(Yintermediaire[i - 1] - 5);
+                    }
+                }
+                else
+                {
+                    if (Nf.Y > Y)
+                    {
+                        Xintermediaire.Add(Xintermediaire[i - 1] - 5);
+                        Yintermediaire.Add(Yintermediaire[i - 1] + 5);
+                    }
+                    else
+                    {
+                        Xintermediaire.Add(Xintermediaire[i - 1] - 5);
+                        Yintermediaire.Add(Yintermediaire[i - 1] - 5);
+                    }
+                }
+            }
+            Xintermediaire.Add(Nf.X);
+            Yintermediaire.Add(Nf.Y);
+
+            for (int i = 0; i<nbTroncons; i++)
+            {
+                tempsRestant = tempsRestant + time_estimation(Xintermediaire[i], Yintermediaire[i], Xintermediaire[i + 1], Yintermediaire[i + 1]);
+            }
+            return tempsRestant;
         }
 
         public override double GetArcCost(GenericNode N2)
