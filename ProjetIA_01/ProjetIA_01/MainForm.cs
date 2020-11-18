@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Diagnostics;
+using System.Threading;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,6 +47,8 @@ namespace ProjetIA_01
 
         private void btnAfficherTrajectoire_Click(object sender, EventArgs e) //affichage trajectoire
         {
+            Stopwatch stopwatch = new Stopwatch(); //Permet de calculer le temps d'execution du programme
+            stopwatch.Start();
             char cas='d';
             double x = 0;
             double y = 0;
@@ -83,12 +87,15 @@ namespace ProjetIA_01
                 DessinSegment((Noeud)chemin[i], (Noeud)chemin[i + 1]);
             }
             btnRecommencer.Show();
-            fond.Show();
+            stopwatch.Stop();  //Fin du calcul du temps d'execution du programme
+            lblSolution.Text = "Une solution a été trouvée en " + stopwatch.Elapsed.TotalSeconds + " secondes.";
+            lblSolution.Visible = true;
         }
 
         private void radioA_CheckedChanged(object sender, EventArgs e) //cas a
         {
             btnAfficherTrajectoire.Show();
+            fond.Show();
         }
 
         private void btnDemarrer_Click(object sender, EventArgs e)
@@ -104,11 +111,13 @@ namespace ProjetIA_01
         private void radioB_CheckedChanged(object sender, EventArgs e)
         {
             btnAfficherTrajectoire.Show();
+            fond.Show();
         }
 
         private void radioC_CheckedChanged(object sender, EventArgs e)
         {
             btnAfficherTrajectoire.Show();
+            fond.Show();
         }
 
         private void btnRecommencer_Click(object sender, EventArgs e)
@@ -117,5 +126,8 @@ namespace ProjetIA_01
             NewForm.Show();
             this.Dispose(false);
         }
+
+
+
     }
 }

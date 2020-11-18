@@ -36,6 +36,7 @@
             this.btnDemarrer = new System.Windows.Forms.Button();
             this.lblChoix = new System.Windows.Forms.Label();
             this.btnRecommencer = new System.Windows.Forms.Button();
+            this.lblSolution = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fond)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             // 
             this.fond.Image = global::ProjetIA_01.Properties.Resources.fond_bleu1;
             this.fond.Location = new System.Drawing.Point(236, 38);
-            this.fond.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fond.Margin = new System.Windows.Forms.Padding(4);
             this.fond.Name = "fond";
             this.fond.Size = new System.Drawing.Size(300, 300);
             this.fond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -53,7 +54,7 @@
             // btnAfficherTrajectoire
             // 
             this.btnAfficherTrajectoire.Location = new System.Drawing.Point(51, 258);
-            this.btnAfficherTrajectoire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAfficherTrajectoire.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherTrajectoire.Name = "btnAfficherTrajectoire";
             this.btnAfficherTrajectoire.Size = new System.Drawing.Size(100, 52);
             this.btnAfficherTrajectoire.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             this.radioA.AutoSize = true;
             this.radioA.Location = new System.Drawing.Point(63, 87);
-            this.radioA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioA.Margin = new System.Windows.Forms.Padding(4);
             this.radioA.Name = "radioA";
             this.radioA.Size = new System.Drawing.Size(63, 21);
             this.radioA.TabIndex = 2;
@@ -78,7 +79,7 @@
             // 
             this.radioB.AutoSize = true;
             this.radioB.Location = new System.Drawing.Point(63, 116);
-            this.radioB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioB.Margin = new System.Windows.Forms.Padding(4);
             this.radioB.Name = "radioB";
             this.radioB.Size = new System.Drawing.Size(63, 21);
             this.radioB.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             this.radioC.AutoSize = true;
             this.radioC.Location = new System.Drawing.Point(63, 144);
-            this.radioC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioC.Margin = new System.Windows.Forms.Padding(4);
             this.radioC.Name = "radioC";
             this.radioC.Size = new System.Drawing.Size(62, 21);
             this.radioC.TabIndex = 4;
@@ -103,7 +104,7 @@
             // btnDemarrer
             // 
             this.btnDemarrer.Location = new System.Drawing.Point(356, 165);
-            this.btnDemarrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDemarrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnDemarrer.Name = "btnDemarrer";
             this.btnDemarrer.Size = new System.Drawing.Size(135, 119);
             this.btnDemarrer.TabIndex = 5;
@@ -124,7 +125,7 @@
             // btnRecommencer
             // 
             this.btnRecommencer.Location = new System.Drawing.Point(384, 414);
-            this.btnRecommencer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecommencer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecommencer.Name = "btnRecommencer";
             this.btnRecommencer.Size = new System.Drawing.Size(121, 28);
             this.btnRecommencer.TabIndex = 7;
@@ -132,11 +133,22 @@
             this.btnRecommencer.UseVisualStyleBackColor = true;
             this.btnRecommencer.Click += new System.EventHandler(this.btnRecommencer_Click);
             // 
+            // lblSolution
+            // 
+            this.lblSolution.Location = new System.Drawing.Point(571, 43);
+            this.lblSolution.Name = "lblSolution";
+            this.lblSolution.Size = new System.Drawing.Size(217, 122);
+            this.lblSolution.TabIndex = 8;
+            this.lblSolution.Text = "\"Une solution a été trouvée en \" + stopwatch.Elapsed.TotalSeconds + \" secondes.\"";
+            this.lblSolution.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblSolution.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSolution);
             this.Controls.Add(this.btnRecommencer);
             this.Controls.Add(this.lblChoix);
             this.Controls.Add(this.btnDemarrer);
@@ -165,6 +177,7 @@
         private System.Windows.Forms.Button btnDemarrer;
         private System.Windows.Forms.Label lblChoix;
         private System.Windows.Forms.Button btnRecommencer;
+        private System.Windows.Forms.Label lblSolution;
     }
 }
 
