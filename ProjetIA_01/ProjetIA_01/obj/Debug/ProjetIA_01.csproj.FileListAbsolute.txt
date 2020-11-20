@@ -13,7 +13,7 @@ C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\bin\Debug\ProjetIA_01.exe
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\bin\Debug\ProjetIA_01.pdb
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csprojResolveAssemblyReference.cache
-C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Form1.resources
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Properties.Resources.resources
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.GenerateResource.Cache
 C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.MainForm.resources
+C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.MainForm.resources

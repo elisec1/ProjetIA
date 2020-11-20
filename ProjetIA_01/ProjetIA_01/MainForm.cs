@@ -59,8 +59,8 @@ namespace ProjetIA_01
                 cas = 'a';
                 x = 100;
                 y = 200;
-                Xf = 200;
-                Yf = 100;
+                Xf = 110;
+                Yf = 190;
 
             }
             else if (radioB.Checked)
@@ -68,16 +68,16 @@ namespace ProjetIA_01
                 cas = 'b';
                 x = 100;
                 y = 200;
-                Xf = 200;
-                Yf = 100;
+                Xf = 110;
+                Yf = 190;
             }
             else if (radioC.Checked)
             {
                 cas = 'c';
-                x = 200;
-                y = 100;
-                Xf = 100;
-                Yf = 200;
+                x = 100;
+                y = 200;
+                Xf = 110;
+                Yf = 190;
             }
             Noeud conditionsInitiales = new Noeud(x, y, Xf, Yf, cas);
             SearchTree Arbre = new SearchTree();

@@ -58,32 +58,36 @@ namespace ProjetIA_01
             Yintermediaire.Add(Y);
             for (int i = 1; i < nbTroncons; i++)
             {
+                Xintermediaire.Add((2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)))/2);
+                Yintermediaire.Add((2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)))/2);
+                /*
                 if (Nf.X > X)
                 {
                     if (Nf.Y > Y)
                     {
-                        Xintermediaire.Add(Xintermediaire[i - 1] + 5);
-                        Yintermediaire.Add(Yintermediaire[i - 1] + 5);
+                        Xintermediaire.Add(2*Xintermediaire[i - 1] + Math.Sqrt(4*2*Xintermediaire[i-1]*(Math.Pow(Xintermediaire[i-1],2)-50)));
+                        Yintermediaire.Add(2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)));
                     }
                     else
                     {
-                        Xintermediaire.Add(Xintermediaire[i - 1] + 5);
-                        Yintermediaire.Add(Yintermediaire[i - 1] - 5);
+                        Xintermediaire.Add(2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
+                        Yintermediaire.Add(2 * Yintermediaire[i - 1] - Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)));
                     }
                 }
                 else
                 {
                     if (Nf.Y > Y)
                     {
-                        Xintermediaire.Add(Xintermediaire[i - 1] - 5);
-                        Yintermediaire.Add(Yintermediaire[i - 1] + 5);
+                        Xintermediaire.Add(2 * Xintermediaire[i - 1] - Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
+                        Yintermediaire.Add(2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50))); ;
                     }
                     else
                     {
-                        Xintermediaire.Add(Xintermediaire[i - 1] - 5);
-                        Yintermediaire.Add(Yintermediaire[i - 1] - 5);
+                        Xintermediaire.Add(2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
+                        Yintermediaire.Add(2 * Yintermediaire[i - 1] - Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50))); ;
                     }
                 }
+                */
             }
             Xintermediaire.Add(Nf.X);
             Yintermediaire.Add(Nf.Y);
