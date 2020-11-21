@@ -10,19 +10,12 @@ namespace ProjetIA_01
     public class Noeud : GenericNode
     {
 
-        public double X
-        {
-            get;set;
-        }
-        public double Y
-        {
-            get;set;
-        }
-        public char cas;// = 'b'; // à modifier en ‘b’ ou ‘c’ selon le choix de l’utilisateur
-        public static Noeud Nf
-        {
-            get;set;
-        }
+        public double X { get; set; }
+        public double Y { get; set; }
+        public char cas { get; set; }
+        public static Noeud Nf { get; set; }
+
+        //CONCTRUCTEURS
         public Noeud (double x, double y): base()
         {
             X = x;
@@ -35,8 +28,11 @@ namespace ProjetIA_01
             Nf = new Noeud(xf, yf);
             cas = choixCas;
         }
+
+        //METHODES
         public override bool IsEqual(GenericNode N2)
         {
+            //on travaille avec des entiers donc tester l'égalité est acceptable
             Noeud N = (Noeud)N2;
             bool estEgal = false;
             if (N.X == X && N.Y == Y)
@@ -44,6 +40,25 @@ namespace ProjetIA_01
                 estEgal = true;
             }
             return estEgal;
+        }
+
+        public override double GetArcCost(GenericNode N2)
+        {
+            Noeud N = (Noeud)N2;
+            double coutArc = time_estimation(X, Y, N.X, N.Y);
+            return coutArc;
+        }
+
+        public override bool EndState()
+        {
+            if (IsEqual(Nf) == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override double CalculeHCost()
@@ -99,25 +114,11 @@ namespace ProjetIA_01
             return tempsRestant;
         }
 
-        public override double GetArcCost(GenericNode N2)
-        {
-            Noeud N = (Noeud)N2;
-            double coutArc = time_estimation(X,Y,N.X,N.Y);
-            return coutArc;
-        }
-        public override bool EndState()
-        {
-            if (IsEqual(Nf) == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+
+
         public override List<GenericNode> GetListSucc()
         {
+            //PAVAGE CARRE DE DISTANCE 1KM :
             List<GenericNode> ListeSuccesseur = new List<GenericNode>();
             Noeud NoeudHautGauche = new Noeud(X - 1, Y + 1);
             Noeud NoeudHaut = new Noeud(X, Y + 1);
@@ -126,7 +127,7 @@ namespace ProjetIA_01
             Noeud NoeudBasDroite = new Noeud(X + 1, Y - 1);
             Noeud NoeudBas = new Noeud(X, Y - 1);
             Noeud NoeudBasGauche = new Noeud(X - 1, Y - 1);
-            Noeud NoeudGauche = new Noeud(X-1, Y);
+            Noeud NoeudGauche = new Noeud(X- 1, Y);
             ListeSuccesseur.Add(NoeudHautGauche);
             ListeSuccesseur.Add(NoeudHaut);
             ListeSuccesseur.Add(NoeudHautDroite);
@@ -141,7 +142,7 @@ namespace ProjetIA_01
 
         public override string ToString()
         {
-            string chaine = "Coordonnée X :" + X + "Coordonnee Y : "+Y;
+            string chaine = "Coordonnée X : " + X + " Coordonnee Y : "+Y + "\n";
             return chaine;
         }
 
@@ -149,13 +150,21 @@ namespace ProjetIA_01
         public double get_wind_speed(double x, double y)
         {
             if (cas == 'a')
+            {
                 return 50;
+            }
             else if (cas == 'b')
+            {
                 if (y > 150)
+                {
                     return 50;
+                }
                 else return 20;
+            }
             else if (y > 150)
+            {
                 return 50;
+            }
             else return 20;
         }
         public double get_wind_direction(double x, double y)
