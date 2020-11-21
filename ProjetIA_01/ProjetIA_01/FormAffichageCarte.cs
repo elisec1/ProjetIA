@@ -67,6 +67,8 @@ namespace ProjetIA_01
             btnRecommencer.Show();
             lblTemps.Text = lblTemps.Text + tempsTotal + " h" ;
             lblDistance.Text = lblDistance.Text + distanceTotale+ " Km";
+            
+
         }
         public void DessinSegment(Noeud n1, Noeud n2)
         {
@@ -89,6 +91,8 @@ namespace ProjetIA_01
         public void Reinitialiser ()
         {
             fond.Show();
+            fond.BringToFront();
+            fond.Refresh();
             lblDistance.Text = "Distance Totale : ";
             lblTemps.Text = "Temps de parcourt total :";
             richTextBoxNoeu.Text = "";

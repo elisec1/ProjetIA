@@ -63,6 +63,26 @@ namespace ProjetIA_01.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arrivee {
+            get {
+                object obj = ResourceManager.GetObject("Arrivee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Depart {
+            get {
+                object obj = ResourceManager.GetObject("Depart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fond_bleu {
             get {
                 object obj = ResourceManager.GetObject("fond-bleu", resourceCulture);

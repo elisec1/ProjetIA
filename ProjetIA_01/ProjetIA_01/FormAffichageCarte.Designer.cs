@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fond = new System.Windows.Forms.PictureBox();
             this.lblChoix = new System.Windows.Forms.Label();
             this.radioC = new System.Windows.Forms.RadioButton();
             this.radioB = new System.Windows.Forms.RadioButton();
@@ -40,20 +39,10 @@
             this.richTextBoxNoeu = new System.Windows.Forms.RichTextBox();
             this.lblTemps = new System.Windows.Forms.Label();
             this.Resultat = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.fond)).BeginInit();
+            this.fond = new System.Windows.Forms.PictureBox();
             this.Resultat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fond)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fond
-            // 
-            this.fond.Image = global::ProjetIA_01.Properties.Resources.fond_bleu1;
-            this.fond.Location = new System.Drawing.Point(148, 55);
-            this.fond.Margin = new System.Windows.Forms.Padding(4);
-            this.fond.Name = "fond";
-            this.fond.Size = new System.Drawing.Size(300, 300);
-            this.fond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.fond.TabIndex = 1;
-            this.fond.TabStop = false;
             // 
             // lblChoix
             // 
@@ -103,10 +92,10 @@
             // 
             // btnAfficherTrajectoire
             // 
-            this.btnAfficherTrajectoire.Location = new System.Drawing.Point(31, 173);
+            this.btnAfficherTrajectoire.Location = new System.Drawing.Point(13, 173);
             this.btnAfficherTrajectoire.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherTrajectoire.Name = "btnAfficherTrajectoire";
-            this.btnAfficherTrajectoire.Size = new System.Drawing.Size(100, 52);
+            this.btnAfficherTrajectoire.Size = new System.Drawing.Size(140, 68);
             this.btnAfficherTrajectoire.TabIndex = 11;
             this.btnAfficherTrajectoire.Text = "Afficher Trajectoire";
             this.btnAfficherTrajectoire.UseVisualStyleBackColor = true;
@@ -114,10 +103,10 @@
             // 
             // btnRecommencer
             // 
-            this.btnRecommencer.Location = new System.Drawing.Point(215, 444);
+            this.btnRecommencer.Location = new System.Drawing.Point(13, 249);
             this.btnRecommencer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecommencer.Name = "btnRecommencer";
-            this.btnRecommencer.Size = new System.Drawing.Size(121, 28);
+            this.btnRecommencer.Size = new System.Drawing.Size(140, 67);
             this.btnRecommencer.TabIndex = 12;
             this.btnRecommencer.Text = "Recommencer";
             this.btnRecommencer.UseVisualStyleBackColor = true;
@@ -171,6 +160,17 @@
             this.Resultat.TabStop = false;
             this.Resultat.Text = "Résultat";
             // 
+            // fond
+            // 
+            this.fond.Image = global::ProjetIA_01.Properties.Resources.fond_bleu1;
+            this.fond.Location = new System.Drawing.Point(173, 55);
+            this.fond.Margin = new System.Windows.Forms.Padding(4);
+            this.fond.Name = "fond";
+            this.fond.Size = new System.Drawing.Size(300, 300);
+            this.fond.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.fond.TabIndex = 1;
+            this.fond.TabStop = false;
+            // 
             // FormAffichageCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,9 +186,9 @@
             this.Controls.Add(this.fond);
             this.Name = "FormAffichageCarte";
             this.Text = "FormAffichageCarte";
-            ((System.ComponentModel.ISupportInitialize)(this.fond)).EndInit();
             this.Resultat.ResumeLayout(false);
             this.Resultat.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fond)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
