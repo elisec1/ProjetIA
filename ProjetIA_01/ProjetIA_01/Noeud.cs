@@ -118,24 +118,30 @@ namespace ProjetIA_01
 
         public override List<GenericNode> GetListSucc()
         {
-            //PAVAGE CARRE DE DISTANCE 1KM :
+            //PAVAGE CARRE DE 1 A 5 CASES AUTOUR DU NOEUD COURANT :
             List<GenericNode> ListeSuccesseur = new List<GenericNode>();
-            Noeud NoeudHautGauche = new Noeud(X - 1, Y + 1);
-            Noeud NoeudHaut = new Noeud(X, Y + 1);
-            Noeud NoeudHautDroite = new Noeud(X + 1, Y + 1);
-            Noeud NoeudDroite = new Noeud(X + 1, Y);
-            Noeud NoeudBasDroite = new Noeud(X + 1, Y - 1);
-            Noeud NoeudBas = new Noeud(X, Y - 1);
-            Noeud NoeudBasGauche = new Noeud(X - 1, Y - 1);
-            Noeud NoeudGauche = new Noeud(X- 1, Y);
-            ListeSuccesseur.Add(NoeudHautGauche);
-            ListeSuccesseur.Add(NoeudHaut);
-            ListeSuccesseur.Add(NoeudHautDroite);
-            ListeSuccesseur.Add(NoeudDroite);
-            ListeSuccesseur.Add(NoeudBasDroite);
-            ListeSuccesseur.Add(NoeudBas);
-            ListeSuccesseur.Add(NoeudBasGauche);
-            ListeSuccesseur.Add(NoeudGauche);
+
+            for (int i = 0; i<=3;i++)
+            {
+                Noeud NoeudHautGauche = new Noeud(X - i, Y + i);
+                Noeud NoeudHaut = new Noeud(X, Y + i);
+                Noeud NoeudHautDroite = new Noeud(X + i, Y + i);
+                Noeud NoeudDroite = new Noeud(X + i, Y);
+                Noeud NoeudBasDroite = new Noeud(X + i, Y - i);
+                Noeud NoeudBas = new Noeud(X, Y - i);
+                Noeud NoeudBasGauche = new Noeud(X - i, Y - i);
+                Noeud NoeudGauche = new Noeud(X - i, Y);
+                ListeSuccesseur.Add(NoeudHautGauche);
+                ListeSuccesseur.Add(NoeudHaut);
+                ListeSuccesseur.Add(NoeudHautDroite);
+                ListeSuccesseur.Add(NoeudDroite);
+                ListeSuccesseur.Add(NoeudBasDroite);
+                ListeSuccesseur.Add(NoeudBas);
+                ListeSuccesseur.Add(NoeudBasGauche);
+                ListeSuccesseur.Add(NoeudGauche);
+            }
+            
+            
             return ListeSuccesseur;
 
         }
