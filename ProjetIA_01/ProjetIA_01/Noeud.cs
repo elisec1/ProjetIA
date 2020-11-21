@@ -118,7 +118,7 @@ namespace ProjetIA_01
 
         public override List<GenericNode> GetListSucc()
         {
-            //PAVAGE CARRE DE 1 A 5 CASES AUTOUR DU NOEUD COURANT :
+            //PAVAGE CARRE DE 1 A 3 CASES AUTOUR DU NOEUD COURANT :
             List<GenericNode> ListeSuccesseur = new List<GenericNode>();
 
             for (int i = 0; i<=3;i++)
