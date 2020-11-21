@@ -19,6 +19,7 @@ namespace ProjetIA_01
 
         private void btnAfficherTrajectoire_Click(object sender, EventArgs e) //affichage trajectoire
         {
+            Reinitialiser();
             char cas = 'd';
             double x = 0;
             double y = 0;
@@ -29,8 +30,8 @@ namespace ProjetIA_01
                 cas = 'a';
                 x = 100;
                 y = 200;
-                Xf = 110;
-                Yf = 190;
+                Xf = 200;
+                Yf = 100;
 
             }
             else if (radioB.Checked)
@@ -38,16 +39,16 @@ namespace ProjetIA_01
                 cas = 'b';
                 x = 100;
                 y = 200;
-                Xf = 110;
-                Yf = 190;
+                Xf = 200;
+                Yf = 100;
             }
             else if (radioC.Checked)
             {
                 cas = 'c';
-                x = 100;
-                y = 200;
-                Xf = 110;
-                Yf = 190;
+                x = 200;
+                y = 100;
+                Xf = 100;
+                Yf = 200;
             }
             Noeud conditionsInitiales = new Noeud(x, y, Xf, Yf, cas);
             SearchTree Arbre = new SearchTree();
@@ -64,8 +65,8 @@ namespace ProjetIA_01
                 richTextBoxNoeu.Text = richTextBoxNoeu.Text +noeud.ToString();
             }
             btnRecommencer.Show();
-            lblTemps.Text = lblTemps.Text + tempsTotal;
-            lblDistance.Text = lblDistance.Text + distanceTotale;
+            lblTemps.Text = lblTemps.Text + tempsTotal + " h" ;
+            lblDistance.Text = lblDistance.Text + distanceTotale+ " Km";
         }
         public void DessinSegment(Noeud n1, Noeud n2)
         {
@@ -81,7 +82,16 @@ namespace ProjetIA_01
         }
         private void btnRecommencer_Click(object sender, EventArgs e)
         {
+            Reinitialiser();
             Close();
+        }
+
+        public void Reinitialiser ()
+        {
+            fond.Show();
+            lblDistance.Text = "Distance Totale : ";
+            lblTemps.Text = "Temps de parcourt total :";
+            richTextBoxNoeu.Text = "";
         }
     }
 }

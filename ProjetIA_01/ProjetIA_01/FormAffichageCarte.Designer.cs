@@ -35,12 +35,13 @@
             this.radioA = new System.Windows.Forms.RadioButton();
             this.btnAfficherTrajectoire = new System.Windows.Forms.Button();
             this.btnRecommencer = new System.Windows.Forms.Button();
-            this.lblResultats = new System.Windows.Forms.Label();
-            this.lblTemps = new System.Windows.Forms.Label();
             this.lblDistance = new System.Windows.Forms.Label();
             this.lblNoeu = new System.Windows.Forms.Label();
             this.richTextBoxNoeu = new System.Windows.Forms.RichTextBox();
+            this.lblTemps = new System.Windows.Forms.Label();
+            this.Resultat = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.fond)).BeginInit();
+            this.Resultat.SuspendLayout();
             this.SuspendLayout();
             // 
             // fond
@@ -122,28 +123,10 @@
             this.btnRecommencer.UseVisualStyleBackColor = true;
             this.btnRecommencer.Click += new System.EventHandler(this.btnRecommencer_Click);
             // 
-            // lblResultats
-            // 
-            this.lblResultats.AutoSize = true;
-            this.lblResultats.Location = new System.Drawing.Point(593, 64);
-            this.lblResultats.Name = "lblResultats";
-            this.lblResultats.Size = new System.Drawing.Size(79, 17);
-            this.lblResultats.TabIndex = 13;
-            this.lblResultats.Text = "Résultats : ";
-            // 
-            // lblTemps
-            // 
-            this.lblTemps.AutoSize = true;
-            this.lblTemps.Location = new System.Drawing.Point(593, 103);
-            this.lblTemps.Name = "lblTemps";
-            this.lblTemps.Size = new System.Drawing.Size(167, 17);
-            this.lblTemps.TabIndex = 14;
-            this.lblTemps.Text = "Temps de parcourt total :";
-            // 
             // lblDistance
             // 
             this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(596, 140);
+            this.lblDistance.Location = new System.Drawing.Point(13, 72);
             this.lblDistance.Name = "lblDistance";
             this.lblDistance.Size = new System.Drawing.Size(119, 17);
             this.lblDistance.TabIndex = 15;
@@ -152,7 +135,7 @@
             // lblNoeu
             // 
             this.lblNoeu.AutoSize = true;
-            this.lblNoeu.Location = new System.Drawing.Point(599, 182);
+            this.lblNoeu.Location = new System.Drawing.Point(16, 114);
             this.lblNoeu.Name = "lblNoeu";
             this.lblNoeu.Size = new System.Drawing.Size(125, 17);
             this.lblNoeu.TabIndex = 16;
@@ -160,22 +143,40 @@
             // 
             // richTextBoxNoeu
             // 
-            this.richTextBoxNoeu.Location = new System.Drawing.Point(596, 214);
+            this.richTextBoxNoeu.Location = new System.Drawing.Point(13, 146);
             this.richTextBoxNoeu.Name = "richTextBoxNoeu";
             this.richTextBoxNoeu.Size = new System.Drawing.Size(356, 233);
             this.richTextBoxNoeu.TabIndex = 17;
             this.richTextBoxNoeu.Text = "";
+            // 
+            // lblTemps
+            // 
+            this.lblTemps.AutoSize = true;
+            this.lblTemps.Location = new System.Drawing.Point(10, 35);
+            this.lblTemps.Name = "lblTemps";
+            this.lblTemps.Size = new System.Drawing.Size(167, 17);
+            this.lblTemps.TabIndex = 14;
+            this.lblTemps.Text = "Temps de parcourt total :";
+            // 
+            // Resultat
+            // 
+            this.Resultat.Controls.Add(this.richTextBoxNoeu);
+            this.Resultat.Controls.Add(this.lblNoeu);
+            this.Resultat.Controls.Add(this.lblDistance);
+            this.Resultat.Controls.Add(this.lblTemps);
+            this.Resultat.Location = new System.Drawing.Point(571, 55);
+            this.Resultat.Name = "Resultat";
+            this.Resultat.Size = new System.Drawing.Size(394, 403);
+            this.Resultat.TabIndex = 18;
+            this.Resultat.TabStop = false;
+            this.Resultat.Text = "Résultat";
             // 
             // FormAffichageCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 485);
-            this.Controls.Add(this.richTextBoxNoeu);
-            this.Controls.Add(this.lblNoeu);
-            this.Controls.Add(this.lblDistance);
-            this.Controls.Add(this.lblTemps);
-            this.Controls.Add(this.lblResultats);
+            this.Controls.Add(this.Resultat);
             this.Controls.Add(this.btnRecommencer);
             this.Controls.Add(this.btnAfficherTrajectoire);
             this.Controls.Add(this.lblChoix);
@@ -186,6 +187,8 @@
             this.Name = "FormAffichageCarte";
             this.Text = "FormAffichageCarte";
             ((System.ComponentModel.ISupportInitialize)(this.fond)).EndInit();
+            this.Resultat.ResumeLayout(false);
+            this.Resultat.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,10 +203,10 @@
         private System.Windows.Forms.RadioButton radioA;
         private System.Windows.Forms.Button btnAfficherTrajectoire;
         private System.Windows.Forms.Button btnRecommencer;
-        private System.Windows.Forms.Label lblResultats;
-        private System.Windows.Forms.Label lblTemps;
         private System.Windows.Forms.Label lblDistance;
         private System.Windows.Forms.Label lblNoeu;
         private System.Windows.Forms.RichTextBox richTextBoxNoeu;
+        private System.Windows.Forms.Label lblTemps;
+        private System.Windows.Forms.GroupBox Resultat;
     }
 }
