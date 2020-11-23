@@ -73,9 +73,26 @@ namespace ProjetIA_01
             Yintermediaire.Add(Y);
             for (int i = 1; i < nbTroncons; i++)
             {
+                if(X>Nf.X)
+                {
+                    Xintermediaire.Add(Xintermediaire[i - 1] + (X-Nf.X) / nbTroncons);
+                }
+                else
+                {
+                    Xintermediaire.Add(Xintermediaire[i - 1] - (X-Nf.X) / nbTroncons);
+                }
+                if(Y>Nf.Y)
+                {
+                    Yintermediaire.Add(Yintermediaire[i - 1] + (Y-Nf.Y) / nbTroncons);
+                }
+                else
+                {
+                    Yintermediaire.Add(Yintermediaire[i - 1] + (Y-Nf.Y) / nbTroncons);
+                }
+                /*
                 Xintermediaire.Add((2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)))/2);
                 Yintermediaire.Add((2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)))/2);
-                /*
+                *//*
                 if (Nf.X > X)
                 {
                     if (Nf.Y > Y)
