@@ -62,12 +62,15 @@ namespace ProjetIA_01
                 DessinSegment(noeud, noeud1);
                 tempsTotal = tempsTotal + noeud.GetArcCost(noeud1);
                 distanceTotale = distanceTotale + Math.Sqrt(Math.Pow(Math.Abs(noeud.X - noeud1.X), 2) + Math.Pow(Math.Abs(noeud.Y - noeud1.Y), 2));
-                richTextBoxNoeu.Text = richTextBoxNoeu.Text +noeud.ToString();
+                richTextBoxNoeud.Text = richTextBoxNoeud.Text +noeud.ToString();
+                
             }
             btnRecommencer.Show();
-            lblTemps.Text = lblTemps.Text + tempsTotal + " h" ;
-            lblDistance.Text = lblDistance.Text + distanceTotale+ " Km";
-            
+            lblTemps.Text = lblTemps.Text + Math.Round(tempsTotal, 1) + " h" ;
+            lblDistance.Text = lblDistance.Text + Math.Round(distanceTotale, 1) + " Km";
+            lblOuverts.Text = lblOuverts.Text + Arbre.L_Fermes.Count();
+            lblFermes.Text = lblFermes.Text + Arbre.L_Ouverts.Count();
+
 
         }
         public void DessinSegment(Noeud n1, Noeud n2)
@@ -95,7 +98,11 @@ namespace ProjetIA_01
             fond.Refresh();
             lblDistance.Text = "Distance Totale : ";
             lblTemps.Text = "Temps de parcourt total :";
-            richTextBoxNoeu.Text = "";
+            richTextBoxNoeud.Text = "";
+            lblFermes.Text = "Nombre de fermés : ";
+            lblOuverts.Text = "Nombre d'ouverts : ";
         }
+
+
     }
 }

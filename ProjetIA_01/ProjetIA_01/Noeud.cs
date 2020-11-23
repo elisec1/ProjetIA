@@ -171,7 +171,7 @@ namespace ProjetIA_01
 
         public override string ToString()
         {
-            string chaine = "Coordonnée X : " + X + " Coordonnee Y : "+Y + "\n";
+            string chaine = "X : " + X + " Y : "+Y + "\n";
             return chaine;
         }
 
