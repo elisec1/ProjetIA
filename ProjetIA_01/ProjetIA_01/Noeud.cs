@@ -123,25 +123,48 @@ namespace ProjetIA_01
 
             for (int i = 0; i<=3;i++)
             {
-                Noeud NoeudHautGauche = new Noeud(X - i, Y + i);
-                Noeud NoeudHaut = new Noeud(X, Y + i);
-                Noeud NoeudHautDroite = new Noeud(X + i, Y + i);
-                Noeud NoeudDroite = new Noeud(X + i, Y);
-                Noeud NoeudBasDroite = new Noeud(X + i, Y - i);
-                Noeud NoeudBas = new Noeud(X, Y - i);
-                Noeud NoeudBasGauche = new Noeud(X - i, Y - i);
-                Noeud NoeudGauche = new Noeud(X - i, Y);
-                ListeSuccesseur.Add(NoeudHautGauche);
-                ListeSuccesseur.Add(NoeudHaut);
-                ListeSuccesseur.Add(NoeudHautDroite);
-                ListeSuccesseur.Add(NoeudDroite);
-                ListeSuccesseur.Add(NoeudBasDroite);
-                ListeSuccesseur.Add(NoeudBas);
-                ListeSuccesseur.Add(NoeudBasGauche);
-                ListeSuccesseur.Add(NoeudGauche);
+                if (X-i>0 && Y+i<300)
+                {
+                    Noeud NoeudHautGauche = new Noeud(X - i, Y + i);
+                    ListeSuccesseur.Add(NoeudHautGauche);
+                }
+                if (Y+i<300)
+                {
+                    Noeud NoeudHaut = new Noeud(X, Y + i);
+                    ListeSuccesseur.Add(NoeudHaut);
+                }
+                if (X+i<300 && Y+i <300)
+                {
+                    Noeud NoeudHautDroite = new Noeud(X + i, Y + i);
+                    ListeSuccesseur.Add(NoeudHautDroite);
+                }
+                if (X+i<300)
+                {
+                    Noeud NoeudDroite = new Noeud(X + i, Y);
+                    ListeSuccesseur.Add(NoeudDroite);
+                }
+                if (X + i < 300 && Y - i > 0)
+                {
+                    Noeud NoeudBasDroite = new Noeud(X + i, Y - i);
+                    ListeSuccesseur.Add(NoeudBasDroite);
+                }
+                if (Y-i>0)
+                {
+                    Noeud NoeudBas = new Noeud(X, Y - i);
+                    ListeSuccesseur.Add(NoeudBas);
+                }
+               if (X-i>0 && Y-i>0)
+                {
+                    Noeud NoeudBasGauche = new Noeud(X - i, Y - i);
+                    ListeSuccesseur.Add(NoeudBasGauche);
+                }
+                if (X-i>0)
+                {
+                    Noeud NoeudGauche = new Noeud(X - i, Y);
+                    ListeSuccesseur.Add(NoeudGauche);
+                }          
             }
-            
-            
+
             return ListeSuccesseur;
 
         }
