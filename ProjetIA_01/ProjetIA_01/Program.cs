@@ -16,7 +16,7 @@ namespace ProjetIA_01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDemarrage());
+            Application.Run(new FormAffichageCarte());
         }
 
 

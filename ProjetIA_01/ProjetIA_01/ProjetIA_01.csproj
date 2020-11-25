@@ -53,12 +53,6 @@
     <Compile Include="FormAffichageCarte.Designer.cs">
       <DependentUpon>FormAffichageCarte.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDemarrage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDemarrage.Designer.cs">
-      <DependentUpon>FormDemarrage.cs</DependentUpon>
-    </Compile>
     <Compile Include="GenericNode.cs" />
     <Compile Include="Noeud.cs" />
     <Compile Include="Program.cs" />
@@ -66,9 +60,6 @@
     <Compile Include="SearchTree.cs" />
     <EmbeddedResource Include="FormAffichageCarte.resx">
       <DependentUpon>FormAffichageCarte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDemarrage.resx">
-      <DependentUpon>FormDemarrage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

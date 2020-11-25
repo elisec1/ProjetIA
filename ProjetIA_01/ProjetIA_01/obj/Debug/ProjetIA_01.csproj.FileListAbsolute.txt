@@ -16,6 +16,5 @@ C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.Properties.Resources.resources
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.csproj.GenerateResource.Cache
 C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.FormAffichageCarte.resources
-C:\Users\elise\Documents\GitHub\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.FormDemarrage.resources
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.FormAffichageCarte.resources
 C:\Users\slaur\Documents\ProjetIA\ProjetIA_01\ProjetIA_01\obj\Debug\ProjetIA_01.FormDemarrage.resources
