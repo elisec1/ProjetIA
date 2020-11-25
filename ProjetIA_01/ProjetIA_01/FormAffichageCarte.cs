@@ -45,10 +45,10 @@ namespace ProjetIA_01
             else if (radioC.Checked)
             {
                 cas = 'c';
-                x = 100;
-                y = 200;
-                Xf = 200;
-                Yf = 100;
+                x = 200;
+                y = 100;
+                Xf = 100;
+                Yf = 200;
             }
             Noeud conditionsInitiales = new Noeud(x, y, Xf, Yf, cas);
             SearchTree Arbre = new SearchTree();
