@@ -66,11 +66,11 @@ namespace ProjetIA_01
             double distance = Math.Sqrt(Math.Pow(Nf.X - X,2)+ Math.Pow(Nf.Y - Y,2));
             double tempsRestant = 0;
             //On divise cette distance totale en tronçons de 10 km pour pouvoir utiliser time_estimation
-            int nbTroncons = (int)distance / 10;
+            int nbTroncons = (int)distance / 10; //nombre de tronçon arrondi à l'entier inférieur
             List<double> Xintermediaire = new List<double>();
             List<double> Yintermediaire = new List<double>();
-            Xintermediaire.Add(X);
-            Yintermediaire.Add(Y);
+            Xintermediaire.Add(X); //coordonnée x du point de départ
+            Yintermediaire.Add(Y); // coordonnée y du point de départ
             for (int i = 1; i < nbTroncons; i++)
             {
                 if(X>Nf.X)
@@ -89,40 +89,9 @@ namespace ProjetIA_01
                 {
                     Yintermediaire.Add(Yintermediaire[i - 1] + (Y-Nf.Y) / nbTroncons);
                 }
-                /*
-                Xintermediaire.Add((2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)))/2);
-                Yintermediaire.Add((2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)))/2);
-                *//*
-                if (Nf.X > X)
-                {
-                    if (Nf.Y > Y)
-                    {
-                        Xintermediaire.Add(2*Xintermediaire[i - 1] + Math.Sqrt(4*2*Xintermediaire[i-1]*(Math.Pow(Xintermediaire[i-1],2)-50)));
-                        Yintermediaire.Add(2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)));
-                    }
-                    else
-                    {
-                        Xintermediaire.Add(2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
-                        Yintermediaire.Add(2 * Yintermediaire[i - 1] - Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50)));
-                    }
-                }
-                else
-                {
-                    if (Nf.Y > Y)
-                    {
-                        Xintermediaire.Add(2 * Xintermediaire[i - 1] - Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
-                        Yintermediaire.Add(2 * Yintermediaire[i - 1] + Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50))); ;
-                    }
-                    else
-                    {
-                        Xintermediaire.Add(2 * Xintermediaire[i - 1] + Math.Sqrt(4 * 2 * Xintermediaire[i - 1] * (Math.Pow(Xintermediaire[i - 1], 2) - 50)));
-                        Yintermediaire.Add(2 * Yintermediaire[i - 1] - Math.Sqrt(4 * 2 * Yintermediaire[i - 1] * (Math.Pow(Yintermediaire[i - 1], 2) - 50))); ;
-                    }
-                }
-                */
             }
-            Xintermediaire.Add(Nf.X);
-            Yintermediaire.Add(Nf.Y);
+            Xintermediaire.Add(Nf.X); //coordonnée x du point final
+            Yintermediaire.Add(Nf.Y); //coordonnée y du point final
 
             for (int i = 0; i<nbTroncons; i++)
             {
